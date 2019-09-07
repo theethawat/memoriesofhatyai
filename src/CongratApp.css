@@ -18,6 +18,12 @@
 }
 
 /*Program Specific*/
+body {
+  background-color: #fffafe;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23a8ffd6' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%23fffafe' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23fff9fd' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23fff8fc' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23fff6fa' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23fff5f8' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23fff4f6' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23fff3f3' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23fff2f0' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23fff1ed' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23fff1ea' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23fff0e7' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23fff0e4' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23ffefe1' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23feefdf' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23fbefdc' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23f8efdb' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23f4f0d9' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23f0f0d8' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
 .avatar-pic {
   max-height: 300px;
 }
