@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Congrat from "./Congrat"
+
 class App extends Component {
   constructor(props) {
     super(props)

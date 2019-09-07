@@ -3,7 +3,7 @@ import "./CongratApp.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import FirebaseConfig from "./Firebase"
 import firebase from "firebase"
-
+import "react-router-dom"
 firebase.initializeApp(FirebaseConfig)
 let database = firebase.database()
 
