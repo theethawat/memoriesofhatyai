@@ -30,14 +30,8 @@ class Congrat extends Component {
         (snapshot.val() && snapshot.val().department) || "Annonymous"
       let congratText =
         (snapshot.val() && snapshot.val().congratText) || "Annonymous"
-      this.setState({
-        name: name,
-        photo: photo,
-        department: department,
-        congratText: congratText
-      })
 
-      let flowerDB = database.ref("/flower/" + this.state.department)
+      let flowerDB = database.ref("/flower/" + department)
       flowerDB.on("value", snapshot => {
         let flowerName =
           (snapshot.val() && snapshot.val().name) || "No Program Resource"
@@ -47,6 +41,13 @@ class Congrat extends Component {
           flowerName: flowerName,
           flowerDefinition: flowerDefinition
         })
+      })
+
+      this.setState({
+        name: name,
+        photo: photo,
+        department: department,
+        congratText: congratText
       })
     })
   }
@@ -76,12 +77,10 @@ class Congrat extends Component {
           <br />8 September 2019
         </p>
         <br />
-        <hr />
 
         <h5 className="kanit acenter">{this.state.flowerName}</h5>
         <p className="kanitlight acenter">{this.state.flowerDefinition}</p>
 
-        <hr />
         <p className="kanitlight acenter">
           <span className="text-info">
             Memories of Hatyai Project | Graduation Ceremony
