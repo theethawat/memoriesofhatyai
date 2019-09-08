@@ -24,19 +24,21 @@ class Congrat extends Component {
   componentDidMount() {
     let congratulation = database.ref("/congrat/" + this.state.congratId)
     congratulation.on("value", snapshot => {
-      let name = (snapshot.val() && snapshot.val().name) || "Annonymous"
-      let photo = (snapshot.val() && snapshot.val().photo) || "Annonymous"
+      let name = (snapshot.val() && snapshot.val().name) || "พี่ ๆ ทุก ๆ คน"
+      let photo =
+        (snapshot.val() && snapshot.val().photo) ||
+        "Annonymoushttps://dev.theduckcreator.in.th/theethawat/freepik-icon/boy2.png"
       let department =
-        (snapshot.val() && snapshot.val().department) || "Annonymous"
+        (snapshot.val() && snapshot.val().department) || "Engineering"
       let congratText =
-        (snapshot.val() && snapshot.val().congratText) || "Annonymous"
+        (snapshot.val() && snapshot.val().congratText) ||
+        "ยินดีด้วยนะครับพี่ๆ ที่จบการศึกษาทุกคน ความสำเร็จของพี่ ๆ คือกำลังใจให้กับรุ่นน้อง ๆ ต่อไปก้าวเดินต่อนะครับ"
 
       let flowerDB = database.ref("/flower/" + department)
       flowerDB.on("value", snapshot => {
-        let flowerName =
-          (snapshot.val() && snapshot.val().name) || "No Program Resource"
+        let flowerName = (snapshot.val() && snapshot.val().name) || ""
         let flowerDefinition =
-          (snapshot.val() && snapshot.val().definition) || "No Program Resource"
+          (snapshot.val() && snapshot.val().definition) || ""
         this.setState({
           flowerName: flowerName,
           flowerDefinition: flowerDefinition
@@ -65,7 +67,10 @@ class Congrat extends Component {
         <h2 className="kanit acenter">
           ยินดีด้วยนะครับ{this.state.name} {this.state.department} PSU
         </h2>
-        <img class="avatar-pic img-fluid piccenter " src={this.state.photo} />
+        <img
+          class="avatar-pic img-fluid piccenter rounded "
+          src={this.state.photo}
+        />
         <br />
 
         <blockquote className="blockquote kanitlight acenter">
@@ -77,7 +82,10 @@ class Congrat extends Component {
           <br />8 September 2019
         </p>
         <br />
-
+        <img
+          src="https://dev.theduckcreator.in.th/theethawat/congratphoto/20190907_175428.jpg"
+          class="flower img-responsive piccenter"
+        />
         <h5 className="kanit acenter">{this.state.flowerName}</h5>
         <p className="kanitlight acenter">{this.state.flowerDefinition}</p>
 
