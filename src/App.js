@@ -25,7 +25,54 @@ class App extends Component {
   onCodeSubmit = e => {
     e.preventDefault()
     console.log("This .code is" + this.state.code)
+    let refNo = 0
+    switch (this.state.code) {
+      case "CW'NunPhuchong":
+        refNo = 1
+        break
+      case "ThansutaMnnthn":
+        refNo = 2
+        break
+      case "KanthamasJunnuan":
+        refNo = 3
+        break
+      case "NoPaphawin":
+        refNo = 4
+        break
+      case "ThirapornUtarapichart":
+        refNo = 6
+        break
+      case "SaharadDensrisereekul":
+        refNo = 7
+        break
+      case "JasmineWiroolhakiat":
+        refNo = 8
+        break
+      case "ไอแอม'มมแรบบิท":
+        refNo = 9
+        break
+      case "FiradaoBennui":
+        refNo = 10
+        break
+      case "BoonDet":
+        refNo = 11
+        break
+      case "ChattarinHorhirunkul":
+        refNo = 12
+        break
+      case "PeachyPeach":
+        refNo = 13
+        break
+      case "KanitJongpunyalert":
+        refNo = 14
+        break
+
+      default:
+        refNo = 20
+        break
+    }
     this.setState({
+      code: refNo,
       show: true
     })
   }
@@ -42,8 +89,8 @@ class App extends Component {
         <h3 className="kanitlight acenter">Memories of Hatyai</h3>
         <form onSubmit={this.onCodeSubmit}>
           <div className="row">
-            <div className="col-sm-4 piccenter">
-              <label className="kanitlight"> ใส่โค้ดที่ได้รับไป </label>
+            <div className="col-sm-4 piccenter acenter">
+              <label className="kanitlight">Enter Your Code</label>
               <input
                 type="text"
                 name="code"
@@ -54,15 +101,35 @@ class App extends Component {
               <br />
               <button
                 type="submit"
-                className="btn btn-info kanitlight piccenter acenter"
+                className="btn btn-primary kanitlight piccenter acenter"
               >
                 Activate
               </button>
             </div>
           </div>
         </form>
+        <br />
+        <p className="kanitlight acenter">
+          <small>
+            ใส่ชื่อ Facebook ของพี่ ๆ (ณ วันที่ 8 กันยายน 2562) โดยไม่มีช่องว่าง
+            และ ตัวใหญ่ตัวเล็กตามชื่อ (Case Sensitive) เป็นโค้ดครับ เช่น
+            Theethawat Savastham โค้ดเป็น TheethawatSavastham
+            ไม่ว่าจะเป็นภาษาอังกฤษหรือภาษาไทย รวมถึงกรณีชื่อมีสัญลักษณ์อื่นๆเช่น
+            ' หรือ _ ใส่ด้วยครับผม{" "}
+          </small>
+        </p>
         <hr />
         {show}
+        <hr />
+        <p className="kanitlight acenter">
+          With Love From{" "}
+          <a href="https://www.facebook.com/tin.savastham">Tin</a> and{" "}
+          <a href="https://www.theduckcreator.in.th">TDC</a>{" "}
+          <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+            Creative Commons Attribution 4.0 International License
+          </a>
+          .{" "}
+        </p>
       </div>
     )
   }
