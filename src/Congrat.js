@@ -27,7 +27,7 @@ class Congrat extends Component {
       let name = (snapshot.val() && snapshot.val().name) || "พี่ ๆ ทุก ๆ คน"
       let photo =
         (snapshot.val() && snapshot.val().photo) ||
-        "Annonymoushttps://dev.theduckcreator.in.th/theethawat/freepik-icon/boy2.png"
+        "https://dev.theduckcreator.in.th/theethawat/freepik-icon/boy2.png"
       let department =
         (snapshot.val() && snapshot.val().department) || "Engineering"
       let congratText =
